@@ -3,6 +3,7 @@ package praktikum;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class IngredientTypeTest {
 
@@ -18,9 +19,9 @@ public class IngredientTypeTest {
     @Test
     public void checkIsIngredientInEnum(){
         boolean hasSauce = isInEnum("SAUCE");
-        assertEquals(true, hasSauce);
+        assertTrue(hasSauce);
         boolean hasFilling = isInEnum("FILLING");
-        assertEquals(true, hasFilling);
+        assertTrue(hasFilling);
     }
     @Test
     public void checkLengthOfEnum(){

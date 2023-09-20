@@ -10,7 +10,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
 
@@ -50,7 +51,7 @@ public class BurgerTest {
         Ingredient ingredient = database.availableIngredients().get(0);
         burger.addIngredient(ingredient);
         boolean isIngredientInBurger = burger.ingredients.contains(ingredient);
-        assertEquals(true, isIngredientInBurger);
+        assertTrue(isIngredientInBurger);
 
     }
     @Test
@@ -65,7 +66,7 @@ public class BurgerTest {
         int sizeIngredients = burger.ingredients.size();
         assertEquals(1, sizeIngredients);
         boolean isSauceInBurger = burger.ingredients.contains(ingredientSauce);
-        assertEquals(false, isSauceInBurger);
+        assertFalse(isSauceInBurger);
 
     }
 
